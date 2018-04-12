@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E4673F3B207B843E005195AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4673F3A207B843E005195AB /* AppDelegate.m */; };
+		E4673F3E207B843E005195AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4673F3D207B843E005195AB /* ViewController.m */; };
+		E4673F41207B843E005195AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4673F3F207B843E005195AB /* Main.storyboard */; };
+		E4673F43207B843E005195AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4673F42207B843E005195AB /* Assets.xcassets */; };
+		E4673F46207B843E005195AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4673F44207B843E005195AB /* LaunchScreen.storyboard */; };
+		E4673F49207B843E005195AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4673F48207B843E005195AB /* main.m */; };
+		E4673F53207B843E005195AB /* KGraphTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4673F52207B843E005195AB /* KGraphTests.m */; };
+		E4673F62207B8A48005195AB /* KGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4673F61207B8A48005195AB /* KGraphView.m */; };
+		E4673F6B207C4FCA005195AB /* SZ300033.json in Resources */ = {isa = PBXBuildFile; fileRef = E4673F64207C4FC9005195AB /* SZ300033.json */; };
+		E4673F6C207C4FCA005195AB /* kLineForMonth.json in Resources */ = {isa = PBXBuildFile; fileRef = E4673F65207C4FC9005195AB /* kLineForMonth.json */; };
+		E4673F6D207C4FCA005195AB /* FiveTrade.json in Resources */ = {isa = PBXBuildFile; fileRef = E4673F66207C4FCA005195AB /* FiveTrade.json */; };
+		E4673F6E207C4FCA005195AB /* timeLineForFiveday.json in Resources */ = {isa = PBXBuildFile; fileRef = E4673F67207C4FCA005195AB /* timeLineForFiveday.json */; };
+		E4673F6F207C4FCA005195AB /* kLineForWeek.json in Resources */ = {isa = PBXBuildFile; fileRef = E4673F68207C4FCA005195AB /* kLineForWeek.json */; };
+		E4673F70207C4FCA005195AB /* kLineForDay.json in Resources */ = {isa = PBXBuildFile; fileRef = E4673F69207C4FCA005195AB /* kLineForDay.json */; };
+		E4673F71207C4FCA005195AB /* timeLineForDay.json in Resources */ = {isa = PBXBuildFile; fileRef = E4673F6A207C4FCA005195AB /* timeLineForDay.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4673F4F207B843E005195AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4673F2E207B843D005195AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4673F35207B843E005195AB;
+			remoteInfo = KGraph;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E4673F36207B843E005195AB /* KGraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4673F39207B843E005195AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E4673F3A207B843E005195AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E4673F3C207B843E005195AB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E4673F3D207B843E005195AB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E4673F40207B843E005195AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E4673F42207B843E005195AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E4673F45207B843E005195AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E4673F47207B843E005195AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4673F48207B843E005195AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E4673F4E207B843E005195AB /* KGraphTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KGraphTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4673F52207B843E005195AB /* KGraphTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KGraphTests.m; sourceTree = "<group>"; };
+		E4673F54207B843E005195AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4673F60207B8A48005195AB /* KGraphView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGraphView.h; sourceTree = "<group>"; };
+		E4673F61207B8A48005195AB /* KGraphView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KGraphView.m; sourceTree = "<group>"; };
+		E4673F64207C4FC9005195AB /* SZ300033.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SZ300033.json; sourceTree = "<group>"; };
+		E4673F65207C4FC9005195AB /* kLineForMonth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kLineForMonth.json; sourceTree = "<group>"; };
+		E4673F66207C4FCA005195AB /* FiveTrade.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FiveTrade.json; sourceTree = "<group>"; };
+		E4673F67207C4FCA005195AB /* timeLineForFiveday.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timeLineForFiveday.json; sourceTree = "<group>"; };
+		E4673F68207C4FCA005195AB /* kLineForWeek.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kLineForWeek.json; sourceTree = "<group>"; };
+		E4673F69207C4FCA005195AB /* kLineForDay.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kLineForDay.json; sourceTree = "<group>"; };
+		E4673F6A207C4FCA005195AB /* timeLineForDay.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timeLineForDay.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4673F33207B843E005195AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4673F4B207B843E005195AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E4673F2D207B843D005195AB = {
+			isa = PBXGroup;
+			children = (
+				E4673F38207B843E005195AB /* KGraph */,
+				E4673F51207B843E005195AB /* KGraphTests */,
+				E4673F37207B843E005195AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E4673F37207B843E005195AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4673F36207B843E005195AB /* KGraph.app */,
+				E4673F4E207B843E005195AB /* KGraphTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4673F38207B843E005195AB /* KGraph */ = {
+			isa = PBXGroup;
+			children = (
+				E4673F63207C4FBD005195AB /* Source */,
+				E4673F39207B843E005195AB /* AppDelegate.h */,
+				E4673F3A207B843E005195AB /* AppDelegate.m */,
+				E4673F3C207B843E005195AB /* ViewController.h */,
+				E4673F3D207B843E005195AB /* ViewController.m */,
+				E4673F60207B8A48005195AB /* KGraphView.h */,
+				E4673F61207B8A48005195AB /* KGraphView.m */,
+				E4673F3F207B843E005195AB /* Main.storyboard */,
+				E4673F42207B843E005195AB /* Assets.xcassets */,
+				E4673F44207B843E005195AB /* LaunchScreen.storyboard */,
+				E4673F47207B843E005195AB /* Info.plist */,
+				E4673F48207B843E005195AB /* main.m */,
+			);
+			path = KGraph;
+			sourceTree = "<group>";
+		};
+		E4673F51207B843E005195AB /* KGraphTests */ = {
+			isa = PBXGroup;
+			children = (
+				E4673F52207B843E005195AB /* KGraphTests.m */,
+				E4673F54207B843E005195AB /* Info.plist */,
+			);
+			path = KGraphTests;
+			sourceTree = "<group>";
+		};
+		E4673F63207C4FBD005195AB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E4673F66207C4FCA005195AB /* FiveTrade.json */,
+				E4673F69207C4FCA005195AB /* kLineForDay.json */,
+				E4673F65207C4FC9005195AB /* kLineForMonth.json */,
+				E4673F68207C4FCA005195AB /* kLineForWeek.json */,
+				E4673F64207C4FC9005195AB /* SZ300033.json */,
+				E4673F6A207C4FCA005195AB /* timeLineForDay.json */,
+				E4673F67207C4FCA005195AB /* timeLineForFiveday.json */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4673F35207B843E005195AB /* KGraph */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4673F57207B843E005195AB /* Build configuration list for PBXNativeTarget "KGraph" */;
+			buildPhases = (
+				E4673F32207B843E005195AB /* Sources */,
+				E4673F33207B843E005195AB /* Frameworks */,
+				E4673F34207B843E005195AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KGraph;
+			productName = KGraph;
+			productReference = E4673F36207B843E005195AB /* KGraph.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E4673F4D207B843E005195AB /* KGraphTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4673F5A207B843E005195AB /* Build configuration list for PBXNativeTarget "KGraphTests" */;
+			buildPhases = (
+				E4673F4A207B843E005195AB /* Sources */,
+				E4673F4B207B843E005195AB /* Frameworks */,
+				E4673F4C207B843E005195AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4673F50207B843E005195AB /* PBXTargetDependency */,
+			);
+			name = KGraphTests;
+			productName = KGraphTests;
+			productReference = E4673F4E207B843E005195AB /* KGraphTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4673F2E207B843D005195AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "段丽娜";
+				TargetAttributes = {
+					E4673F35207B843E005195AB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					E4673F4D207B843E005195AB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E4673F35207B843E005195AB;
+					};
+				};
+			};
+			buildConfigurationList = E4673F31207B843D005195AB /* Build configuration list for PBXProject "KGraph" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E4673F2D207B843D005195AB;
+			productRefGroup = E4673F37207B843E005195AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4673F35207B843E005195AB /* KGraph */,
+				E4673F4D207B843E005195AB /* KGraphTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E4673F34207B843E005195AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4673F6D207C4FCA005195AB /* FiveTrade.json in Resources */,
+				E4673F46207B843E005195AB /* LaunchScreen.storyboard in Resources */,
+				E4673F43207B843E005195AB /* Assets.xcassets in Resources */,
+				E4673F6C207C4FCA005195AB /* kLineForMonth.json in Resources */,
+				E4673F41207B843E005195AB /* Main.storyboard in Resources */,
+				E4673F71207C4FCA005195AB /* timeLineForDay.json in Resources */,
+				E4673F6E207C4FCA005195AB /* timeLineForFiveday.json in Resources */,
+				E4673F70207C4FCA005195AB /* kLineForDay.json in Resources */,
+				E4673F6B207C4FCA005195AB /* SZ300033.json in Resources */,
+				E4673F6F207C4FCA005195AB /* kLineForWeek.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4673F4C207B843E005195AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4673F32207B843E005195AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4673F3E207B843E005195AB /* ViewController.m in Sources */,
+				E4673F49207B843E005195AB /* main.m in Sources */,
+				E4673F3B207B843E005195AB /* AppDelegate.m in Sources */,
+				E4673F62207B8A48005195AB /* KGraphView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4673F4A207B843E005195AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4673F53207B843E005195AB /* KGraphTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4673F50207B843E005195AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4673F35207B843E005195AB /* KGraph */;
+			targetProxy = E4673F4F207B843E005195AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E4673F3F207B843E005195AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4673F40207B843E005195AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E4673F44207B843E005195AB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4673F45207B843E005195AB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E4673F55207B843E005195AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E4673F56207B843E005195AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E4673F58207B843E005195AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E7836SG768;
+				INFOPLIST_FILE = KGraph/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dln.KGraph;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E4673F59207B843E005195AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E7836SG768;
+				INFOPLIST_FILE = KGraph/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dln.KGraph;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E4673F5B207B843E005195AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KGraphTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dln.KGraphTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KGraph.app/KGraph";
+			};
+			name = Debug;
+		};
+		E4673F5C207B843E005195AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KGraphTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dln.KGraphTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KGraph.app/KGraph";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4673F31207B843D005195AB /* Build configuration list for PBXProject "KGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4673F55207B843E005195AB /* Debug */,
+				E4673F56207B843E005195AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4673F57207B843E005195AB /* Build configuration list for PBXNativeTarget "KGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4673F58207B843E005195AB /* Debug */,
+				E4673F59207B843E005195AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4673F5A207B843E005195AB /* Build configuration list for PBXNativeTarget "KGraphTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4673F5B207B843E005195AB /* Debug */,
+				E4673F5C207B843E005195AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4673F2E207B843D005195AB /* Project object */;
+}
