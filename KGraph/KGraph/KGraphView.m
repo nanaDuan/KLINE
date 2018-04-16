@@ -211,18 +211,18 @@
     
     //时间
     NSString *time = [self getTimeStrFromDate:dict[@"time"]];
-    CGFloat textWith = [time sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10]}].width + 10;
+    CGFloat textWith = [time sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10]}].width + 5;
     CATextLayer *text1 = [self setTextLayerWithString:time textColor:[UIColor whiteColor] textFontSize:10 bgColor:[UIColor grayColor] textAlignment:1 frame:CGRectMake(pointX - textWith/2, LHEIGHT - 30, textWith, 12)];
     [shapeLayer addSublayer:text1];
     //价格
     NSString *price =[NSString stringWithFormat:@"%.2f",[dict[@"current"]floatValue]];
-    CGFloat priceWith = [price sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10]}].width + 10;
+    CGFloat priceWith = [price sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10]}].width + 5;
     CGFloat priceX = (  point.x <= self.frame.size.width/2 )? 0:KWIDTH-priceWith;
     CATextLayer *text2 = [self setTextLayerWithString:price textColor:[UIColor whiteColor] textFontSize:10 bgColor:[UIColor grayColor] textAlignment:1 frame:CGRectMake(priceX, pointY-6, priceWith, 12)];
     [shapeLayer addSublayer:text2];
     //成交量
     NSString *volume =[NSString stringWithFormat:@"%.2f",[dict[@"volume"]floatValue]];
-    CGFloat volumeWith = [volume sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10]}].width + 10;
+    CGFloat volumeWith = [volume sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10]}].width + 5;
     CGFloat vomuleX = (  point.x <= self.frame.size.width/2 )? 0:KWIDTH-volumeWith;
     CATextLayer *text3 = [self setTextLayerWithString:volume textColor:[UIColor whiteColor] textFontSize:10 bgColor:[UIColor grayColor] textAlignment:1 frame:CGRectMake(vomuleX,bottomY-6, volumeWith, 12)];
     [shapeLayer addSublayer:text3];
