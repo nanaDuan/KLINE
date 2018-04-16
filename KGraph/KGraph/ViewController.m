@@ -32,6 +32,7 @@
     
 }
 
+
 - (NSDictionary *)readLoadFileWithName:(NSString *)name{
     
     NSString *path = [[NSBundle mainBundle]pathForResource:name ofType:@"json"];

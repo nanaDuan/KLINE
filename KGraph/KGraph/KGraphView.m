@@ -49,6 +49,9 @@
 @property(nonatomic,strong)CALayer * animateLayer;
 //数据显示
 @property(nonatomic,strong)CAShapeLayer * crossLineLayer;
+
+//当前坐标index
+@property(nonatomic,assign)NSInteger highLightIndex;
 @end
 
 @implementation KGraphView
@@ -57,7 +60,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self drawFrameView];
-//        [self addGestures];
+        [self addGestures];
         NSDictionary *dict =[self readLoadFileWithName:@"SZ300033"][@"SZ300033"];
         self.preClosePrice = [[dict objectForKey:@"last_close"] floatValue];
         
@@ -109,6 +112,12 @@
     return _animateLayer;
 }
 
+- (CAShapeLayer *)crossLineLayer{
+    if (_crossLineLayer == nil) {
+        _crossLineLayer = [CAShapeLayer layer];
+    }
+    return _crossLineLayer;
+}
 - (void)addGestures{
     
     UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressEvent:)];
@@ -150,16 +159,88 @@
     }
 }
 
+#pragma mark - 长按事件
+- (void)longPressEvent:( UILongPressGestureRecognizer *)recognizer{
+    if (recognizer.state == UIGestureRecognizerStateBegan || recognizer.state == UIGestureRecognizerStateChanged) {
+        
+        CGPoint currentPoint =[recognizer locationInView:self];
+        if (currentPoint.x > 0 && currentPoint.x < KWIDTH && currentPoint.y > 0 && currentPoint.y < KHEIGHT) {
+            NSInteger index = (int) currentPoint.x / self.volumeStep;
+            if (index > self.dataArray.count - 1) {
+                self.highLightIndex = self.dataArray.count -1;
+            }else{
+                self.highLightIndex = index;
+            }
 
-- (void)longPressEvent:(UILongPressGestureRecognizer *)longPress{
-    if (longPress.state == UIGestureRecognizerStateBegan || longPress.state == UIGestureRecognizerStateChanged) {
+            [self.crossLineLayer removeFromSuperlayer];
+            self.crossLineLayer = [self setCrossLineLayerWithIndex:self.highLightIndex clickPoint:currentPoint];
+            [self.layer addSublayer:self.crossLineLayer];
+            
+        }
         
-    }else if (longPress.state == UIGestureRecognizerStateEnded){
-        
+    }else if (recognizer.state == UIGestureRecognizerStateEnded){
+         [self.crossLineLayer removeFromSuperlayer];
     }else{
         
     }
     
+}
+
+- (CAShapeLayer *)setCrossLineLayerWithIndex:(NSInteger)index clickPoint:(CGPoint)point{
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    
+    NSDictionary *dict = self.dataArray[index];
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+
+    CGFloat pointY = (self.maxPrice - [dict[@"current"] floatValue]) * self.priceUnit + 15;
+    [path moveToPoint:CGPointMake(0, pointY)];
+    [path addLineToPoint:CGPointMake(KWIDTH, pointY)];
+    CGFloat pointX = self.volumeStep * index;
+    CGFloat bottomY = KHEIGHT - [dict[@"volume"] floatValue]* self.volumeUnit;
+    [path moveToPoint:CGPointMake(pointX, 0)];
+    [path addLineToPoint:CGPointMake(pointX, bottomY)];
+    
+    [path moveToPoint:CGPointMake(0, bottomY)];
+    [path addLineToPoint:CGPointMake(KWIDTH, bottomY)];
+    
+    shapeLayer.path = path.CGPath;
+    shapeLayer.lineWidth = 1.0f;
+    shapeLayer.strokeColor = [UIColor grayColor].CGColor;
+    shapeLayer.fillColor = [UIColor clearColor].CGColor;
+    
+    //时间
+    NSString *time = [self getTimeStrFromDate:dict[@"time"]];
+    CGFloat textWith = [time sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10]}].width + 10;
+    CATextLayer *text1 = [self setTextLayerWithString:time textColor:[UIColor whiteColor] textFontSize:10 bgColor:[UIColor grayColor] textAlignment:1 frame:CGRectMake(pointX - textWith/2, LHEIGHT - 30, textWith, 12)];
+    [shapeLayer addSublayer:text1];
+    //价格
+    NSString *price =[NSString stringWithFormat:@"%.2f",[dict[@"current"]floatValue]];
+    CGFloat priceWith = [price sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10]}].width + 10;
+    CGFloat priceX = (  point.x <= self.frame.size.width/2 )? 0:KWIDTH-priceWith;
+    CATextLayer *text2 = [self setTextLayerWithString:price textColor:[UIColor whiteColor] textFontSize:10 bgColor:[UIColor grayColor] textAlignment:1 frame:CGRectMake(priceX, pointY-6, priceWith, 12)];
+    [shapeLayer addSublayer:text2];
+    //成交量
+    NSString *volume =[NSString stringWithFormat:@"%.2f",[dict[@"volume"]floatValue]];
+    CGFloat volumeWith = [volume sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10]}].width + 10;
+    CGFloat vomuleX = (  point.x <= self.frame.size.width/2 )? 0:KWIDTH-volumeWith;
+    CATextLayer *text3 = [self setTextLayerWithString:volume textColor:[UIColor whiteColor] textFontSize:10 bgColor:[UIColor grayColor] textAlignment:1 frame:CGRectMake(vomuleX,bottomY-6, volumeWith, 12)];
+    [shapeLayer addSublayer:text3];
+    
+    return shapeLayer;
+    
+}
+
+- (NSString *)getTimeStrFromDate:(NSString *)dateStr{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    formatter.dateFormat = @"EEE MMM d HH:mm:ss z yyyy";
+    formatter.locale = [NSLocale localeWithLocaleIdentifier:@"en_US"];
+    NSDate *date = [formatter dateFromString: [NSString stringWithFormat:@"%@",dateStr]];
+    NSDateFormatter *matter= [[NSDateFormatter alloc]init];
+    matter.dateFormat = @"HH:mm";
+    NSString *time = [matter stringFromDate:date];
+    
+    return time;
 }
 
 - (void)setMaxAndMinData{
@@ -208,7 +289,7 @@
         //成交量坐标
          self.volumeW = self.volumeStep - self.volumeStep/3.0;
         CGPoint startPoint = CGPointMake(self.volumeStep * i ,KHEIGHT - [self.dataArray[i][@"volume"] floatValue] * self.volumeUnit);
-        CGPoint endPoint = CGPointMake(self.volumeStep * i + self.volumeW, KHEIGHT);
+        CGPoint endPoint = CGPointMake(self.volumeStep * i, KHEIGHT);
         
      
         
